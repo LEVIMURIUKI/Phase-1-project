@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Jazz Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> MUSIC PLAYER</h1>
+        <input type="file" id="musicInput" accept="audio/*">
+        <div id="themeToggle">
+            <input type="checkbox" id="toggleSwitch">
+            <label for="toggleSwitch" id="toggleLabel">Dark Mode</label>
+        </div>
+        <div id="musicControls">
+            <button id="playButton">Play</button>
+            <button id="pauseButton">Pause</button>
+            <button id="nextButton">Next</button>
+            <button id="likeButton">Like</button>
+        </div>
+        <audio id="musicPlayer" controls>
+            Your browser does not support the audio element.
+        </audio>
+        <div id="commentSection">
+            <input type="text" id="commentInput" placeholder="Add a comment">
+            <button id="addCommentButton">Add Comment</button>
+            <ul id="commentList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
