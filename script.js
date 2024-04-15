@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("change", toggleTheme);
     addCommentButton.addEventListener("click", addComment);
 
-    // Listen for changes in the file input
+    
     musicInput.addEventListener("change", () => {
         const file = musicInput.files[0];
         const url = URL.createObjectURL(file);
         musicPlayer.src = url;
     });
 
-    // Load existing comments from localStorage if available
+    
     loadComments();
 });
 
@@ -39,16 +39,16 @@ function pauseMusic() {
 }
 
 function nextMusic() {
-    // Implement logic to play the next music track
-    // For this example, we'll just stop the current track
+
+   
     const musicPlayer = document.getElementById("musicPlayer");
     musicPlayer.pause();
     musicPlayer.currentTime = 0;
 }
 
 function likeMusic() {
-    // Implement logic to like the current music track
-    // For this example, we'll just log a message
+
+    
     console.log("Liked the current music track");
 }
 
@@ -72,23 +72,22 @@ function addComment() {
     const commentItem = document.createElement("li");
     commentItem.textContent = commentText;
 
-    // Create a delete button for the comment
+   
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
     deleteButton.addEventListener("click", () => {
         commentItem.remove();
-        deleteComment(commentText); // Remove the comment from localStorage
+        deleteComment(commentText); 
     });
 
-    // Append the delete button to the comment item
+    
     commentItem.appendChild(deleteButton);
 
     commentList.appendChild(commentItem);
 
-    // Save the comment to localStorage
+    
     saveComment(commentText);
 
-    // Clear the input field
     commentInput.value = "";
 }
 
@@ -104,15 +103,14 @@ function loadComments() {
         const commentItem = document.createElement("li");
         commentItem.textContent = comment;
 
-        // Create a delete button for the comment
+        
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.addEventListener("click", () => {
             commentItem.remove();
-            deleteComment(comment); // Remove the comment from localStorage
+            deleteComment(comment); 
         });
 
-        // Append the delete button to the comment item
         commentItem.appendChild(deleteButton);
 
         commentList.appendChild(commentItem);
